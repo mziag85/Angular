@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "angular2": {
+    "my_app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,10 +24,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+               "src/assets"
             ],
             "styles": [
               "src/styles.scss"
@@ -61,10 +58,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular2:build:production"
+              "buildTarget": "my_app:build:production"
             },
             "development": {
-              "buildTarget": "angular2:build:development"
+              "buildTarget": "my_app:build:development"
             }
           },
           "defaultConfiguration": "development"
