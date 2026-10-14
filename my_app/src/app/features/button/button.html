@@ -1,4 +1,5 @@
-<button class="{{ variant }} {{ size }}">
+
+<button class="btn" [class]="[variant, size]">
   @if (icon) {
     <img [src]="icon" alt="icon">
   }
