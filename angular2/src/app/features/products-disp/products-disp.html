@@ -1,15 +1,12 @@
-@if (products.length === 0) {
-  <p>No products available.</p>
-}
-
 @for (product of products; track product.id) {
   <div>
     <h3>{{ product.name }}</h3>
-
     @if (product.discountPrice) {
       <p>{{ product.price }}$ > {{ product.discountPrice }}$</p>
     } @else {
       <p>{{ product.price }}$</p>
     }
   </div>
+} @empty {
+<p>No products available.</p>
 }

@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
 
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  discountPrice?: number;
+}
+
 @Component({
   imports: [],
   selector: 'app-products-disp',
@@ -7,7 +14,8 @@ import { Component } from '@angular/core';
   templateUrl: './products-disp.html',
 })
 export class ProductsDisp {
-  products = [
+  protected readonly products: Product[] = [
+
     {
       id: 1,
       name: 'Wireless Mouse',
