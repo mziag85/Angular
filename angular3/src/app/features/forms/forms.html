@@ -1,0 +1,17 @@
+
+
+<form [formGroup]="applyForm" (ngSubmit)="onSubmit()">
+  <label for="name">სახელი</label>
+  <input id="name" type="text" formControlName="name">
+
+   <label for="email">მეილი</label>
+  <input id="email" type="email" formControlName="email">
+
+  <label for="password">პაროლი</label>
+  <input id="password" type="password" formControlName="password">
+
+  <label for="nickname">ნიკნეიმი</label>
+  <input id="nickname" type="text" formControlName="nickname">
+
+  <button type="submit">გაგზავნა</button>
+</form>
