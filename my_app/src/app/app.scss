@@ -1,0 +1,40 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.default,
+.clicked{
+    background-color: rgba(255, 255, 255, 1);
+  padding: 20px 50px;
+  border-radius: 24px;
+   gap: 24px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(204, 212, 220);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.buttons_def,
+.buttons_click,
+.buttons_icon{
+    display: flex;
+    gap: 24px;
+}
+.button_sizes{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.small,
+.medium,
+.large {
+    display: flex;
+    gap: 20px;
+}
+
+// გამიჭირდა: ფოტოს მისამართები, გასტილვა, აპპს რომ ცალკე sass აქვს, button-ის default სტილი რომ მინდა მოვხსნა სხვა button-ს, ტექსტი რომ მინდა click-ზე შეიცვალოს, ან hover რომ მხოლოს ერთ მომენტში ჰქონდეს, მერე აღარ...

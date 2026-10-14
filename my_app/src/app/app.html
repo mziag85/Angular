@@ -1,0 +1,50 @@
+ <div class="default">
+    <h1>Default State</h1>
+    <div class="buttons_def">
+<app-button [variant]="'primary'" [text]="'primary'"></app-button>
+  <app-button [variant]="'success'" [text]="'success'"></app-button>
+  <app-button [variant]="'warning'" [text]="'warning'"></app-button>
+  </div>
+</div>
+
+<div class="clicked">
+    <h1>Clicked State</h1>
+     <div class="buttons_click">
+ <app-button [variant]="'primary'" [text]="'loading...'"></app-button>
+  <app-button [variant]="'success'" [text]="'processing...'"></app-button>
+  <app-button [variant]="'warning'" [text]="'sending...'"></app-button>
+</div>
+</div>
+
+<div class="button_sizes">
+  <h1>Button Sizes</h1>
+  <div class="small">
+    <app-button [variant]="'primary'" [text]="'small primary'" [size]="'small'"></app-button>
+
+<app-button [variant]="'success'" [text]="'small success'" [size]="'small'"></app-button>
+
+<app-button [variant]="'warning'" [text]="'small warning'" [size]="'small'"></app-button>
+  </div>
+
+  <div class="medium">
+    <app-button [variant]="'primary'" [text]="'medium primary'" [size]="'medium'"></app-button>
+    <app-button [variant]="'success'" [text]="'medium success'" [size]="'medium'"></app-button>
+    <app-button [variant]="'warning'" [text]="'medium warning'" [size]="'medium'"></app-button>
+  </div>
+  <div class="large">
+    <app-button [variant]="'primary'" [text]="'large primary'" [size]="'large'"></app-button>
+    <app-button [variant]="'success'" [text]="'large success'" [size]="'large'"></app-button>
+    <app-button [variant]="'warning'" [text]="'large warning'" [size]="'large'"></app-button>
+  </div>
+</div>
+
+<div class="iconed">
+    <h1>iconed State</h1>
+     <div class="buttons_icon">
+ <app-button [variant]="'primary'" [text]="'download'" [icon]="'assets/icons/download_icon.svg'"></app-button>
+  <app-button [variant]="'success'" [text]="'confirm'" [icon]="'assets/icons/confirm_icon.svg'"></app-button>
+  <app-button [variant]="'warning'" [text]="'warning'" [icon]="'assets/icons/warning_icon.svg'"></app-button>
+</div>
+</div>
+
+

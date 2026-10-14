@@ -1,0 +1,66 @@
+
+@mixin button{
+  width: 388px;
+  height: 56px;
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  
+}
+
+.primary {
+  @include button();
+  background-color: rgba(14, 165, 233, 1);
+}
+.primary:hover{
+  background-color: rgba(2, 132, 199, 1);
+  box-shadow: 0 20px 25px 0 rgba(14, 165, 233, 0.3);
+}
+
+.success {
+  @include button();
+  background-color: rgba(34, 197, 94, 1);
+}
+.success:hover{
+  background-color: rgba(22, 163, 74, 1);
+  box-shadow: 0 20px 25px 0 rgba(34, 197, 94, 0.3);
+}
+
+.warning {
+  @include button();
+  background-color: rgba(245, 158, 11, 1);
+}
+.warning:hover{
+  background-color:rgba(217, 119, 6, 1);
+  box-shadow: 0 20px 25px 0 rgba(245, 158, 11, 0.3);
+}
+
+
+.small {
+  width: 124px;
+  height: 36px;
+  border-radius: 8px;
+  padding: 9px 10px;
+  font-size: 14px;
+}
+
+.medium {
+  width: 173px;
+  height: 48px;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 16px;
+}
+
+.large {
+  width: 190px;
+  height: 60px;
+  border-radius: 16px;
+  padding: 19px 26px;
+  font-size: 18px;
+}
