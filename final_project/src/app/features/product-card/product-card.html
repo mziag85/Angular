@@ -1,0 +1,13 @@
+<div class="product-card">
+  <img class="product_image" [src]="image()" [alt]="name()" (click)="goToDetails()" />
+
+  <div class="product_description">
+    <h2 class="product_name" (click)="goToDetails()">
+      {{ name() }}
+    </h2>
+
+    <p class="product_price">${{ price() }}</p>
+
+    <button class="moveToCart" (click)="goToCart()">Add to cart</button>
+  </div>
+</div>

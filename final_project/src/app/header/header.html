@@ -1,0 +1,39 @@
+<div class="header">
+  <div class="name_nav">
+    <img src="images/main_logo.svg" alt="Main logo" />
+    <h1>ShopHub</h1>
+
+    <nav class="nav">
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li>Categories</li>
+        <li>Deals</li>
+        <li>About</li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="find_cart">
+    <div class="search">
+      <img src="images/search_icon.svg" alt="Search icon" />
+      <input type="text" placeholder="Search products..." />
+    </div>
+    <span>
+      <span class="cart-icon">
+        <img
+          src="images/cart_icon.svg"
+          alt="cart icon"
+          routerLink="/cart"
+          style="cursor: pointer"
+        />
+
+        @if (cart.cartProducts().length > 0) {
+          <span class="cart-count">
+            {{ cart.cartProducts().length }}
+          </span>
+        }
+      </span>
+      <img src="images/face_icon.svg" alt="face icon" />
+    </span>
+  </div>
+</div>

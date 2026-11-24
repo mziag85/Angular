@@ -1,0 +1,62 @@
+<div class="product-details">
+  <div class="first_section">
+    <div class="images">
+      <img class="main_image" [src]="product.image" [alt]="product.name" />
+      <div class="second-images">
+        @for (photo of product.secondImages; track photo) {
+          <img [src]="photo" alt="Product image" />
+        }
+      </div>
+    </div>
+    <div class="h1_features">
+      <h1>{{ product.name }}</h1>
+      <p class="model">{{ product.model }}</p>
+      <div class="stars_box">
+        <img src="images/star.svg" alt="star" />
+        <img src="images/star.svg" alt="star" />
+        <img src="images/star.svg" alt="star" />
+        <img src="images/star.svg" alt="star" />
+        <img src="images/star.svg" alt="star" />
+        <p class="reviews">(124 reviews)</p>
+        <p class="stock">In Stock</p>
+      </div>
+      <div class="prices">
+        <p class="price">${{ product.price }}</p>
+        @if (product.oldPrice) {
+          <p class="old-price">${{ product.oldPrice }}</p>
+          <span class="discount">@if (product.oldPrice) {
+  <span class="discount">
+    {{ ((product.oldPrice - product.price) / product.oldPrice * 100).toFixed(0) }}%
+  </span>
+}</span>
+        }
+      </div>
+      <p class="free_shipping">Free shipping on orders over $50</p>
+
+      <button class="cart" (click)="addToCart()">
+        <img src="images/cart.svg" alt="Cart" />
+        Add to Cart
+      </button>
+
+      <button class="buy">Buy Now</button>
+
+      <aside>
+        <h2>Key Features</h2>
+        @for (feature of product.features; track feature) {
+          <p>
+            <span class="checkmark">✓</span>
+            {{ feature }}
+          </p>
+        }
+      </aside>
+    </div>
+  </div>
+
+  <section class="second_section">
+    <h3>Description</h3>
+    <h2>Product Description</h2>
+    <p>{{ product.description1 }}</p>
+    <p>{{ product.description2 }}</p>
+    <p>{{ product.description3 }}</p>
+  </section>
+</div>

@@ -1,0 +1,81 @@
+<div class="cart-page">
+  <h1>Shopping Cart</h1>
+  <p class="subtitle">Review your items and proceed to checkout</p>
+
+  <div class="cart-content">
+    <div class="cart-products">
+      <div class="cart-header">
+        <h2>Cart Items ({{ cart.cartProducts().length }})</h2>
+       <button class="clear-all" (click)="cart.clearCart()">
+  Clear All
+</button>
+      </div>
+
+      @if (cart.cartProducts().length > 0) {
+        @for (product of cart.cartProducts(); track $index) {
+          <div class="cart-item">
+            <img [src]="product.image" [alt]="product.name" />
+
+            <div class="product-info">
+              <h3>{{ product.name }}</h3>
+
+              <p>{{ product.details[0] }}|{{ product.details[1] }}</p>
+            
+              <div class="price">
+              <strong>${{ product.price }}</strong>
+              @if (product.oldPrice) {
+                <del>${{ product.oldPrice }}</del>
+                <span class="discount">
+                  <p>{{ (((product.oldPrice - product.price) / product.oldPrice) * 100).toFixed(0)}}% OFF 
+                </p></span>
+              }
+              </div>
+            </div>
+            <div class="quantity">
+              <button class="minus" (click)="getMinus()">-</button>
+              <span>{{ items }}</span>
+              <button class="plus" (click)="getPlus()">+</button>
+              </div>
+             <button class="trash" (click)="cart.removeFromCart($index)">
+  <img src="images/trash.svg" alt="delete">
+</button>
+            
+          </div>
+        }
+      } @else {
+        <p class="empty-cart">Your cart is empty.</p>
+      }
+      <div class="continue">
+        <span><img src="images/arrow.svg" alt="arrow" /></span>
+        <button class="continue-shopping" routerLink="/">
+  Continue Shopping
+</button>
+      </div>
+    </div>
+
+    <div class="cart-summary">
+      <h2>Order Summary</h2>
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span>${{ subtotal.toFixed(2) }}</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span>Free</span>
+      </div>
+
+      <hr />
+
+      <div class="summary-row total">
+        <span>Total</span>
+        <span>${{ subtotal.toFixed(2) }}</span>
+      </div>
+
+      <button routerLink="/checkout">
+  Proceed to Checkout
+</button>
+    </div>
+  </div>
+</div>

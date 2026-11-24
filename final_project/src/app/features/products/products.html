@@ -1,0 +1,15 @@
+<div class="products_component">
+
+<div class="products_text">
+  
+    <h1 class="products_h1">All Products</h1>
+  <p class="products_p">Showing 1-24 of 1,247 results</p>
+</div>
+  <div class="products">
+    @for (product of products; track product.id) {
+     <app-product-card [name]="product.name" [price]="product.price " [image]="product.image" [id]="product.id" (addToCart)="goToCart($event)"/>
+     
+    }
+  </div>
+
+</div>
